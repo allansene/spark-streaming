@@ -29,7 +29,7 @@ object LearningScala2 {;import org.scalaide.worksheet.runtime.library.WorksheetS
   var x = 2;System.out.println("""x  : Int = """ + $show(x ));$skip(47); 
   while (x >= 0) {
   	println(x)
-  	x -= 1
+  	x += 1
   };$skip(59); 
                                                   
   x = 0;$skip(41); 
@@ -49,6 +49,8 @@ object LearningScala2 {;import org.scalaide.worksheet.runtime.library.WorksheetS
 	 var x1 = 0;System.out.println("""x1  : Int = """ + $show(x1 ));$skip(13); 
 	 var x2 = 1;System.out.println("""x2  : Int = """ + $show(x2 ));$skip(14); 
 	 var sum = 0;System.out.println("""sum  : Int = """ + $show(sum ));$skip(73); 
-	 do { sum = x1 + x2; x1 = x2; x2 = sum; println(sum) } while (sum < 34)}
-	  
+	 do { sum = x1 + x2; x1 = x2; x2 = sum; println(sum) } while (sum < 34);$skip(72); 
+                                                  
+	  val test = 1 to 5;System.out.println("""test  : scala.collection.immutable.Range.Inclusive = """ + $show(test ));$skip(17); 
+	  println(test)}
 }

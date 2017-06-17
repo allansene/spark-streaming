@@ -1,16 +1,16 @@
 object LearningScala2 {
   // Flow control
-  
+
   // If / else syntax
   if (1 > 3) println("Impossible!") else println("The world makes sense.")
                                                   //> The world makes sense.
-  
+
   if (1 > 3) {
   	println("Impossible!")
   } else {
   	println("The world makes sense.")
   }                                               //> The world makes sense.
-  
+
   // Matching - like switch in other languages:
   val number = 3                                  //> number  : Int = 3
   number match {
@@ -19,7 +19,7 @@ object LearningScala2 {
   	case 3 => println("Three")
   	case _ => println("Something else")
  	}                                         //> Three
- 	
+
  	// For loops
  	for (x <- 0 to 4) {
  		val squared = x * x
@@ -29,7 +29,7 @@ object LearningScala2 {
                                                   //| 4
                                                   //| 9
                                                   //| 16
-                                                  
+
   // While loops
   var x = 2                                       //> x  : Int = 2
   while (x >= 0) {
@@ -38,19 +38,19 @@ object LearningScala2 {
   }                                               //> 2
                                                   //| 1
                                                   //| 0
-                                                  
+
   x = 0
   do { println(x); x+=1 } while (x <= 2)          //> 0
                                                   //| 1
                                                   //| 2
-                                                  
+
    // Expressions
    // "Returns" the final value in a block automatically
-   
+
    {val x = 10; x + 20}                           //> res0: Int = 30
-                                                
+
 	 println({val x = 10; x + 20})            //> 30
-	 
+
 	 // EXERCISE
 	 // Write some code that prints out the first 10 values of the Fibonacci sequence.
 	 // This is the sequence where every number is the sum of the two numbers before it.
@@ -67,5 +67,7 @@ object LearningScala2 {
                                                   //| 13
                                                   //| 21
                                                   //| 34
-	  
+
+	  val test = 1 to 5                       //> test  : scala.collection.immutable.Range.Inclusive = Range 1 to 5
+	  println(test)                           //> Range 1 to 5
 }
