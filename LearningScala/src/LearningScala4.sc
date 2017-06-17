@@ -8,7 +8,6 @@ object LearningScala4 {
   
   val captainStuff = ("Picard", "Enterprise-D", "NCC-1701-D")
                                                   //> captainStuff  : (String, String, String) = (Picard,Enterprise-D,NCC-1701-D)
-                                                  //| 
   println(captainStuff)                           //> (Picard,Enterprise-D,NCC-1701-D)
   
   // You refer to individual fields with their ONE-BASED index:
@@ -105,6 +104,14 @@ println(archersShip)                              //> Unknown
 // modula operator, like other languages, is %, which gives you the remainder after division. For example, 9 % 3 = 0
 // because 9 is evenly divisible by 3.) Do this first by iterating through all the items in the list and testing each
 // one as you go. Then, do it again by using a filter function on the list instead.
+
+val numbers = (1 to 20).toList                    //> numbers  : List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 
+                                                  //| 15, 16, 17, 18, 19, 20)
+
+val divBy3 = for(a <- numbers) yield a % 3        //> divBy3  : List[Int] = List(1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 
+                                                  //| 2, 0, 1, 2)
+
+val divisibleByThree = numbers.filter(_ % 3 == 0) //> divisibleByThree  : List[Int] = List(3, 6, 9, 12, 15, 18)
 
 // That's enough for now!
 // There is MUCH more to learn about Scala. We didn't cover many other collection types, including mutable collections.

@@ -5,34 +5,34 @@ object LearningScala3 {
   // Don't forget the = before the expression!
   def squareIt(x: Int) : Int = {
   	x * x
-  }
+  }                                               //> squareIt: (x: Int)Int
   
-  def cubeIt(x: Int): Int = {x * x * x}
+  def cubeIt(x: Int): Int = {x * x * x}           //> cubeIt: (x: Int)Int
   
-  println(squareIt(2))
+  println(squareIt(2))                            //> 4
   
-  println(cubeIt(2))
+  println(cubeIt(2))                              //> 8
   
   // Functions can take other functions as parameters
   
   def transformInt(x: Int, f: Int => Int) : Int = {
   	f(x)
-  }
+  }                                               //> transformInt: (x: Int, f: Int => Int)Int
   
-  val result = transformInt(2, cubeIt)
-  println (result)
+  val result = transformInt(2, cubeIt)            //> result  : Int = 8
+  println (result)                                //> 8
   
   // "Lambda functions", "anonymous functions", "function literals"
   // You can declare functions inline without even giving them a name
   // This happens a lot in Spark.
-  transformInt(3, x => x * x * x)
+  transformInt(3, x => x * x * x)                 //> res0: Int = 27
   
-  transformInt(10, x => x / 2)
+  transformInt(10, x => x / 2)                    //> res1: Int = 5
   
   transformInt(3, x => {
   		val y = x * 2; y * y
   	}
-  )
+  )                                               //> res2: Int = 36
   
   // This is really important!
   
@@ -42,14 +42,15 @@ object LearningScala3 {
   // Then, do the same thing using a function literal instead of a separate, named function.
 	def upper(str: String) : String = {
   	str.toUpperCase
-  }
+  }                                               //> upper: (str: String)String
   
-  upper("allan")
+  upper("allan")                                  //> res3: String = ALLAN
   
   def transformStr(str: String, f: String => String) : String = {
   	f(str)
-  }
+  }                                               //> transformStr: (str: String, f: String => String)String
   
   transformStr("allan", {str: String => str.toUpperCase } )
+                                                  //> res4: String = ALLAN
   
 }
