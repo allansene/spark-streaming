@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 4 elements to &apos;LearningScala/src&apos;&#x0A;- Original project: &apos;LearningScala&apos;&#x0A;- Destination element: &apos;LearningScala/src&apos;&#x0A;- Original elements:&#x0A;     LearningScala3.sc&#x0A;     LearningScala4.sc&#x0A;     LearningScala1.sc&#x0A;     LearningScala2.sc&#x0A;- Update references to refactored element" description="Move files" destination="/src" element1="LearningScala3.sc" element2="LearningScala4.sc" element3="LearningScala1.sc" element4="LearningScala2.sc" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1497711428879" units="0" version="1.0"/>
-</session>
