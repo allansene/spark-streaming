@@ -21,43 +21,28 @@ object LearningScala2 {
  	}                                         //> Three
  	
  	// For loops
- 	for (x <- 1 to 4) {
+ 	for (x <- 0 to 4) {
  		val squared = x * x
  		println(squared)
- 	}                                         //> 1
+ 	}                                         //> 0
+                                                  //| 1
                                                   //| 4
                                                   //| 9
                                                   //| 16
                                                   
   // While loops
-  var x = 10                                      //> x  : Int = 10
+  var x = 2                                       //> x  : Int = 2
   while (x >= 0) {
   	println(x)
   	x -= 1
-  }                                               //> 10
-                                                  //| 9
-                                                  //| 8
-                                                  //| 7
-                                                  //| 6
-                                                  //| 5
-                                                  //| 4
-                                                  //| 3
-                                                  //| 2
+  }                                               //> 2
                                                   //| 1
                                                   //| 0
                                                   
   x = 0
-  do { println(x); x+=1 } while (x <= 10)         //> 0
+  do { println(x); x+=1 } while (x <= 2)          //> 0
                                                   //| 1
                                                   //| 2
-                                                  //| 3
-                                                  //| 4
-                                                  //| 5
-                                                  //| 6
-                                                  //| 7
-                                                  //| 8
-                                                  //| 9
-                                                  //| 10
                                                   
    // Expressions
    // "Returns" the final value in a block automatically
@@ -70,6 +55,17 @@ object LearningScala2 {
 	 // Write some code that prints out the first 10 values of the Fibonacci sequence.
 	 // This is the sequence where every number is the sum of the two numbers before it.
 	 // So, the result should be 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
-	 
-	   
+	 var x1 = 0                               //> x1  : Int = 0
+	 var x2 = 1                               //> x2  : Int = 1
+	 var sum = 0                              //> sum  : Int = 0
+	 do { sum = x1 + x2; x1 = x2; x2 = sum; println(sum) } while (sum < 34)
+                                                  //> 1
+                                                  //| 2
+                                                  //| 3
+                                                  //| 5
+                                                  //| 8
+                                                  //| 13
+                                                  //| 21
+                                                  //| 34
+	  
 }
